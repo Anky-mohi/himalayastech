@@ -4,13 +4,10 @@ import Brands from "./Brands";
 import Portfolio from "./Portfolio";
 import VideoSection from "./VideoSection";
 import ImageOverlayAnimation from "./ImageOverlayAnimation";
-import OverlappingImages from "./OverlappingImages";
 import UpDownAnimation from "./UpDownAnimation";
-import { useState, useEffect } from "react";
 import { useRef } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import Rightupdown from "./Rightupdown";
-import Payment from "./PaymentForm";
 import PlanCard from './PlanCard';
 
 const Home = () => {
@@ -38,11 +35,7 @@ const Home = () => {
     console.log(`Subscribed to ${plan.title} plan for $${plan.price}`);
   };
 
-  const handleCompletePayment = (plan) => {
-    // You may want to handle the success logic here (e.g., update user account)
-    console.log(`Payment for ${plan.name} completed successfully.`);
-    setPaymentComplete(true);
-  };
+  
 
   // Close the dropdown if the user clicks outside of it
   window.onclick = function (event) {
