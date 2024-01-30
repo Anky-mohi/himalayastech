@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { useRef } from "react";
 
+
 import { FaBars, FaTimes } from "react-icons/fa";
 
 const About = () => {
@@ -186,7 +187,16 @@ const About = () => {
         </section>
       </main>
 
+      <div>
 
+
+<div class="container">
+        
+            
+        
+        </div>
+
+</div>
     
 
 

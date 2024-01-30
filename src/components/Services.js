@@ -3,10 +3,14 @@ import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { useRef } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
-
+import PlanCard from './PlanCard';
 
 
 const Services = () => {
+
+
+
+
   const styles = {
     backgroundColor: "#cb6036",
     color: "white",
@@ -19,6 +23,16 @@ const Services = () => {
   };
   const color = {
     color: "orange",
+  };
+  const plans = [
+    { id: 1, title: 'Bronze', price: 29.31 , features: ['Free Hosting', 'Custom Domain', 'Online Support','content changes'] },
+    { id: 2, title: 'Silver', price: 48.63 , features: ['Free Hosting + Domain', '', 'SEO (Search Engine Optimization)', 'Products Upload + content change up tp 25'] },
+    { id: 3, title: 'Gold', price: 67.96, features: ['Free Hosting + Domain', 'Online Support 24/7', 'Instagram Marketing', 'Products Upload + content change up tp 55'] },
+    { id: 4, title: 'Diamond', price: 111.14 , features: ['Free Hosting + Domain', 'Online Support 24/7', 'Professional Social Media Management', 'Inclusion of up to 100 New Products and Page Changes'] },
+  ];
+  const handleSubscribe = (plan) => {
+    // Implement your payment processing logic here (e.g., integrate with a payment gateway)
+    console.log(`Subscribed to ${plan.title} plan for $${plan.price}`);
   };
 
   const [menuOpen, setMenuOpen] = useState(false);
@@ -389,6 +403,25 @@ const Services = () => {
         </div>
       </section>
 
+<br></br>
+<br></br>
+<div>
+
+
+<div className="Plan">
+      <h1 className="subhead">Subscription Plans</h1>
+      <br></br>
+      <br></br>
+      <div className="plans-container">
+        {plans.map(plan => (
+          <PlanCard key={plan.id} plan={plan} handleSubscribe={handleSubscribe} />
+        ))}
+      </div>
+    </div>
+
+</div>
+<br></br>
+<br></br>
       <div class="main-page-sec main-page-sec2" style={styles}>
         <div class="row">
           <div class="col-md-3">

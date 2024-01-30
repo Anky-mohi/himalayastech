@@ -10,123 +10,6 @@ body {
   color: #ff914c;
 }
 
-/* PhotoGallery.css */
-.photo-gallery-container {
-  width: 400px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.gallery-controls {
-  margin-bottom: 10px;
-}
-
-.gallery-controls button {
-  background-color: #3498db;
-  color: #fff;
-  padding: 5px 10px;
-  border: none;
-  cursor: pointer;
-  margin: 0 5px;
-}
-
-.gallery-image img {
-  width: 100%;
-  height: auto;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  opacity: 0;
-  transition: opacity 0.5s ease-in-out;
-}
-
-.visible {
-  opacity: 1;
-}
-
-.hidden {
-  opacity: 0;
-  pointer-events: none;
-}
-
-
-
-.birthday-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 100vh;
-  background-color: #f0f0f0;
-  overflow: hidden;
-}
-
-.celebrate {
-  animation: bounce 0.5s ease infinite alternate,
-             moveUp 3s ease-in-out infinite;
-}
-
-.balloon-container {
-  display: flex;
-  justify-content: space-around;
-  margin-top: 20px;
-}
-
-.balloon {
-  width: 20px;
-  height: 30px;
-  background-color: #ff1493; /* Pink */
-  border-radius: 50% 50% 0 0;
-  margin-bottom: 60px;
-  position: relative;
-  animation: float 0.5s ease infinite alternate;
-}
-
-.fireworks {
-  width: 200px;
-  height: 200px;
-  background: linear-gradient(45deg, #ffd700, #ff4500, #00bfff, #8a2be2);
-  position: absolute;
-  top: 0;
-  animation: explode 2s ease-in-out infinite;
-}
-
-@keyframes float {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(-10px);
-  }
-}
-
-@keyframes bounce {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(-5px);
-  }
-}
-
-@keyframes moveUp {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-30px);
-  }
-}
-
-@keyframes explode {
-  0% {
-    opacity: 1;
-    transform: scale(1);
-  }
-  100% {
-    opacity: 0;
-    transform: scale(1.5);
-  }
-}
-
 
 @import url("https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;700&display=swap");
 
@@ -198,7 +81,7 @@ nav {
 
 	header nav {
 		position: fixed;
-		top: -100vh;
+	
 		left: 0;
 		height: 100%;
 		width: 100%;
@@ -474,7 +357,13 @@ img {
 }
 .contact__heading span {
   color: #ff914c;
-  font-weight: 600;
+  font-size: 2rem;
+  text-align: center;
+  color: #ff914c;
+  font-family: 'Poppins';
+  font-size: 50px;
+  font-weight: 600px;
+  font-weight: 500;
 }
 .contact__wrapper {
   display: flex;
@@ -1395,7 +1284,7 @@ nav {
     margin: 0;
     display: flex;
     margin-left: -250px;
-    margin-bottom: 600px;
+    margin-bottom: 400px;
     display: block;
     color: #ff914c;
   font-family: Georgia, 'Times New Roman', Times, serif;
@@ -1515,9 +1404,144 @@ font-size: 16px; }
 
 
 
+.hr {
+  size: 5px;
+  color: #000;
+}
+
+.para {
+  size: 1px;
+}
+/* PlanCard.css */
 
 
 
+
+
+
+.plans-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  background-image: url(../public/BG.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.plan-card {
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px;
+  width: 200px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  color: #fff; /* White text on all cards */
+  
+}
+
+.plan-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.bronze {
+  background-color: #f5d76e; /* Light Yellow */
+  text-align: center;
+}
+
+.silver {
+  background-color: #95a5a6; /* Silver */
+  text-align: center;
+}
+
+.gold {
+  background-color: #f39c12; /* Orange */
+  text-align: center;
+}
+
+.diamond {
+  background-color: #3498db; /* Dodger Blue */
+  text-align: center;
+}
+
+.price
+ {
+  margin: 0;
+  color: green;
+}
+.subhead {
+  text-align: center;
+  color: #ff914c;
+    font-size: 2rem;
+    text-align: center;
+    color: #ff914c;
+    font-family: 'Poppins';
+    font-size: 50px;
+    font-weight: 600px;
+    font-weight: 500;
+}
+.subscripchat {
+  background-color: red;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1em;
+  width: 100px;
+  margin-left: 80px;
+    margin-top: 50px;
+}
+.subscrip {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1em;
+  width: 100px;
+}
+/* PlanCard.css */
+
+/* ... (previous styles) ... */
+
+.subscription-message {
+  margin-top: 10px;
+  color: red; /* Green color for success message */
+  font-weight: bold;
+}
+
+/* ... (remaining styles) ... */
+
+
+button:hover {
+  background-color: green;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  text-align: left;
+}
+
+li {
+  margin-bottom: 8px;
+ /* Add some left padding for better readability */
+  position: relative;
+}
+
+/* Custom bullet point style */
+li::before {
+  content: '\2022'; /* Unicode character for a bullet point */
+  color: #fff; /* Color of the bullet point */
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+  position: absolute;
+  left: 0;
+}
 
 
 

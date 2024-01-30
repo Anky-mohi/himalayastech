@@ -10,8 +10,8 @@ import { useState, useEffect } from "react";
 import { useRef } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import Rightupdown from "./Rightupdown";
-import BirthdayEffect from './BirthdayEffect';
-
+import Payment from "./PaymentForm";
+import PlanCard from './PlanCard';
 
 const Home = () => {
   const styles = {
@@ -27,6 +27,22 @@ const Home = () => {
   function myFunction() {
     document.getElementById("myDropdown").classList.toggle("show");
   }
+  const plans = [
+    { id: 1, title: 'Bronze', price: 29.31 , features: ['Free Hosting', 'Custom Domain', 'Online Support','content changes'] },
+    { id: 2, title: 'Silver', price: 48.63 , features: ['Free Hosting + Domain', '', 'SEO (Search Engine Optimization)', 'Products Upload + content change up tp 25'] },
+    { id: 3, title: 'Gold', price: 67.96, features: ['Free Hosting + Domain', 'Online Support 24/7', 'Instagram Marketing', 'Products Upload + content change up tp 55'] },
+    { id: 4, title: 'Diamond', price: 111.14 , features: ['Free Hosting + Domain', 'Online Support 24/7', 'Professional Social Media Management', 'Inclusion of up to 100 New Products and Page Changes'] },
+  ];
+  const handleSubscribe = (plan) => {
+    // Implement your payment processing logic here (e.g., integrate with a payment gateway)
+    console.log(`Subscribed to ${plan.title} plan for $${plan.price}`);
+  };
+
+  const handleCompletePayment = (plan) => {
+    // You may want to handle the success logic here (e.g., update user account)
+    console.log(`Payment for ${plan.name} completed successfully.`);
+    setPaymentComplete(true);
+  };
 
   // Close the dropdown if the user clicks outside of it
   window.onclick = function (event) {
@@ -50,14 +66,15 @@ const Home = () => {
 
   return (
     <>
+    
+    
       <div className="whatsapp">
         <a href="https://wa.me/919872567925" target="blank">
           <img src="./icons8-whatsapp-48.png" />
         </a>
       </div>
 
-      <main>
-        <header>
+      <header>
           <div className="logo">
             {" "}
             <a href="/">
@@ -100,7 +117,7 @@ const Home = () => {
                 </Link>
               </li>
               <li className="ws">
-                <a href="/contact">
+                <a href="#contact">
                   <span>
                     {" "}
                     <img
@@ -128,7 +145,6 @@ const Home = () => {
             <div className="w">
               {" "}
               <div class="introduction__button">
-                
                 <Link to="/Contact" class="abc">
                   Get A quote
                 </Link>
@@ -141,6 +157,14 @@ const Home = () => {
           </button>
         </header>
 
+
+
+
+
+
+      <main>
+
+        
         <section class="hero_image pt150 pb150">
           <div class="row hero_banr">
             <div class="col-md-3 igm">
@@ -247,7 +271,8 @@ const Home = () => {
                   <div class="card-block block-1">
                     <h3 class="card-title">WEB DEVELOPMENT</h3>
                     <p class="card-text">
-                    An affordable web design service is what you get when we design your website.
+                      An affordable web design service is what you get when we
+                      design your website.
                     </p>
                     <a title="Read more" class="read-more">
                       <Link to="/Services">Read more </Link>
@@ -262,7 +287,8 @@ const Home = () => {
                   <div class="card-block block-2">
                     <h3 class="card-title">Social Media Marketing</h3>
                     <p class="card-text">
-                    We have different ideas and new generations to focus on the market with young talents. 
+                      We have different ideas and new generations to focus on
+                      the market with young talents.
                     </p>
                     <a title="Read more" class="read-more">
                       <Link to="/Services">Read more </Link>
@@ -277,7 +303,8 @@ const Home = () => {
                   <div class="card-block block-3">
                     <h3 class="card-title">GLOBAL SUPPORT</h3>
                     <p class="card-text">
-                    We help technology companies grow by providing a world-class customer experience for their customers.
+                      We help technology companies grow by providing a
+                      world-class customer experience for their customers.
                     </p>
                     <a title="Read more" class="read-more">
                       <Link to="/Services">Read more </Link>
@@ -293,10 +320,11 @@ const Home = () => {
                 <div class="card">
                   <div class="card-block block-4">
                     <h3 class="card-title">
-                    Animation and digital film production
+                      Animation and digital film production
                     </h3>
                     <p class="card-text">
-                    Realized with passion, designed with perfection, the art of creativity Sample Work..
+                      Realized with passion, designed with perfection, the art
+                      of creativity Sample Work..
                     </p>
                     <a title="Read more" class="read-more">
                       <Link to="/Services">Read more </Link>
@@ -311,7 +339,8 @@ const Home = () => {
                   <div class="card-block block-5">
                     <h3 class="card-title">OFFSHORE SERVICES</h3>
                     <p class="card-text">
-                    We help you organize business and technology strategies in a cost-effective way.
+                      We help you organize business and technology strategies in
+                      a cost-effective way.
                     </p>
                     <a title="Read more" class="read-more">
                       <Link to="/Services">Read more</Link>
@@ -326,7 +355,9 @@ const Home = () => {
                   <div class="card-block block-6">
                     <h3 class="card-title">E-commerce</h3>
                     <p class="card-text">
-                    We have many of the best technologies such as we use reactjs, node js and many others to build the spa beat website
+                      We have many of the best technologies such as we use
+                      reactjs, node js and many others to build the spa beat
+                      website
                     </p>
                     <a title="Read more" class="read-more">
                       <Link to="/Services">Read more </Link>
@@ -339,6 +370,12 @@ const Home = () => {
             </div>
           </div>
         </section>
+
+
+
+
+
+        
         <div class="container">
           <div className="introduction__content">
             <h2>
@@ -357,14 +394,29 @@ const Home = () => {
         </div>
         <div className="wer"></div>
         <Portfolio />
+<br></br>
+<br></br>
+<br></br>
+
+     
+<div>
+
+
+<div className="Plan">
+      <h1 className="subhead">Subscription Plans</h1>
+      <br></br>
+      <br></br>
+      <div className="plans-container">
+        {plans.map(plan => (
+          <PlanCard key={plan.id} plan={plan} handleSubscribe={handleSubscribe} />
+        ))}
+      </div>
+    </div>
+
+</div>
 
         
-
         <Brands />
-
-
-
-
 
         <section class="contact">
           <div class="container">
@@ -468,6 +520,24 @@ const Home = () => {
           </div>
         </section>
       </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
 
       <div class="main-page-sec main-page-sec2" style={styles}>
         <div class="row">
@@ -667,6 +737,18 @@ const Home = () => {
           </div>
         </div>
       </div>
+
+
+
+
+
+
+
+
+
+
+
+
       <footer>
         <div class="container">
           <div class="footer">
@@ -695,7 +777,6 @@ const Home = () => {
             <div class="footer__monospace">
               <p>2024 © Himalayas Techies. All rights Reserved.</p>
             </div>
-            
           </div>
         </div>
       </footer>
